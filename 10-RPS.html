@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="10-RPS-style.css">
+</head>
+<body>
+<div class="div1">
+    <div>
+        <p style="font-weight: bold;
+          font-size: 30px;
+          margin-bottom: 80px">Rock Paper Scissors</p>
+    </div>
+    <div class="div3">
+        <button onclick="
+            const randomN = Math.random();
+            mymov = 'Rock';
+            tabdilcom(randomN);
+            javab(mymov, commov);
+            show(mymov, commov, result);" class="game-icon">
+            <img src="10-images/Rock-emoji.png" class="game-icon-pic">
+        </button>
+        <button onclick="
+            const randomN = Math.random();
+            mymov = 'Paper';
+            tabdilcom(randomN);
+            javab(mymov, commov);
+            show(mymov, commov, result);" class="game-icon">
+            <img src="10-images/Paper-emoji.png" class="game-icon-pic">
+        </button>
+        <button onclick="
+            const randomN = Math.random();
+            mymov = 'Scissors';
+            tabdilcom(randomN);
+            javab(mymov, commov);
+            show(mymov, commov, result);" class="game-icon">
+            <img src="10-images/Scissors-emoji.png" class="game-icon-pic">
+        </button>
+    </div>
+    <div>
+        <p class="js-result result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score"></p>
+    </div>
+    <div>
+        <button onclick="
+            Score.Win = 0;
+            Score.loss = 0;
+            Score.Tei = 0;
+            document.querySelector('.js-score')
+                .innerHTML = `Win: ${Score.Win} Loss: ${Score.loss} Tie: ${Score.Tei}`;" class="reset">
+            Reset Score
+        </button>
+    </div>
+</div>
+<script src="10-RPS-js.js"></script>
+</body>
+</html>
